@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 1920px;
+            background-color: gray;
+        }
+
+        .badge-root {
+            position: relative;
+            top: 1000px;
+        }
+
+        .badge-container {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s;
+            transform: translateY(-50%);
+        }
+
+        #badge_reveal {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .badge-container:nth-child(1) {
+            transition-delay: 1s;
+            z-index: 2;
+            margin-left: 216px;
+
+        }
+
+        .badge-container:nth-child(2) {
+            transition-delay: 2s;
+            z-index: 3;
+            margin-left: 845px;
+        }
+
+        .badge-container:nth-child(3) {
+            transition-delay: 3s;
+            z-index: 4;
+            margin-left: 1380px;
+            margin-top: 110px;
+        }
+
+        .badge-container:nth-child(4) {
+            transition-delay: 4s;
+            z-index: 5;
+            margin-left: 682px;
+            margin-top: 388px;
+        }
+
+        .badge-container:nth-child(5) {
+            transition-delay: 5s;
+            z-index: 6;
+            margin-left: 263px;
+            margin-top: 490px;
+        }
+
+        .badge-container:nth-child(6) {
+            transition-delay: 6s;
+            z-index: 7;
+            margin-left: 776px;
+            margin-top: 745px;
+        }
+
+        .badge-container:nth-child(7) {
+            transition-delay: 7s;
+            z-index: 8;
+            margin-left: 1400px;
+            margin-top: 705px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="badge-root">
+        <div class="badge-container" id="badge_reveal">
+            <img src="./source/badge1.png" alt="Image 1">
+        </div>
+        <div class="badge-container">
+            <img src="./source/badge2.png" alt="Image 2">
+        </div>
+        <div class="badge-container">
+            <img src="./source/badge3.png" alt="Image 3">
+        </div>
+        <div class="badge-container">
+            <img src="./source/badge4.png" alt="Image 4">
+        </div>
+        <div class="badge-container">
+            <img src="./source/badge5.png" alt="Image 5">
+        </div>
+        <div class="badge-container">
+            <img src="./source/badge6.png" alt="Image 6">
+        </div>
+        <div class="badge-container">
+            <img src="./source/badge_goal.png" alt="Image 7">
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var imageContainers = document.querySelectorAll('.badge-container');
+            var windowHeight = window.innerHeight;
+
+            imageContainers.forEach(function (container) {
+                var containerTop = container.getBoundingClientRect().top;
+
+                if (containerTop < windowHeight) {
+                    container.style.opacity = '1';
+                } else {
+                    container.style.opacity = '0';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
