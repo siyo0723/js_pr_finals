@@ -654,10 +654,6 @@ section .inner { padding-top: 200px; }
 
 .badge-container:nth-child(7) { transition-delay: 7s; margin-left: 1400px; margin-top: 705px; } 
 
-.final_image { position: absolute; display: inline-block; margin-top: 1500px; } 
-
-.final_logo { position: absolute; display: inline-block; margin-left: 850px; margin-top: 1680px; animation: floating 3s infinite; animation-delay: 2s; } 
-
 /* point-text */
 
 .spotlight_text { position: relative; top: 5700px; } 

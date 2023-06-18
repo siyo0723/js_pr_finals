@@ -17,7 +17,7 @@ let moveToTop = function () {
 };
 
 //scroll to top
-var display_backtotop = 200; // Scrolled pixels from top until the link appears
+var display_backtotop = 200;
 
 $(document).ready(function () {
     $(window).scroll(function () {
